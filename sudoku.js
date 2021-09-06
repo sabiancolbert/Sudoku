@@ -9,13 +9,17 @@ const h = new Array(8);
 
 /* set numbers */
 {
-    const tried = new Array(9);
-    while () {
-        var number;
-        while (!tried.contain number) {
+    const tried = new Array();
+    var invalid = true;
+    while (invalid) {
+        var number = Math.floor(Math.random()*9);
+        while (tried.includes(number) && tried.length < 8) {
             number = Math.floor(Math.random()*9);
+            
         }
     }
+    //if tried contains number then broke
+}
 }
 
 /* attempt to unsolve to difficulty */
