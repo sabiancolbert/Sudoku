@@ -16,15 +16,15 @@ const Y6 = new Array(8);
 const Y7 = new Array(8);
 const Y8 = new Array(8);
 
-const  = new Array(7);
-const  = new Array(7);
-const  = new Array(7);
-const  = new Array(7);
-const  = new Array(7);
-const  = new Array(7);
-const  = new Array(7);
-const  = new Array(7);
-const  = new Array(7);
+const A1tried = new Array(7);
+const A2tried = new Array(7);
+const A3tried = new Array(7);
+const A4tried = new Array(7);
+const A5tried = new Array(7);
+const A6tried = new Array(7);
+const A7tried = new Array(7);
+const A8tried = new Array(7);
+const A9tried = new Array(7);
 
 const  = new Array(7);
 const  = new Array(7);
@@ -111,6 +111,7 @@ const  = new Array(7);
     a1();
     a2();
     a3();
+    
     // use these for midgame checking too
     
     
