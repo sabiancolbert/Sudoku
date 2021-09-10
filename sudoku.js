@@ -15,6 +15,97 @@ const Y5 = new Array(8);
 const Y6 = new Array(8);
 const Y7 = new Array(8);
 const Y8 = new Array(8);
+
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+const  = new Array(7);
+
 /* set numbers */
 {
     a1();
