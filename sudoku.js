@@ -126,9 +126,36 @@ var di = false;
 var ki = false;
 var kn = false;
 /* set rules */
-function rules() {
+function rules(x, y) {
     var invalid = false;
-
+    /* consecutive */
+    if (co) {}
+    /* killer (cage) */
+    if (ca) {}
+    /* non consecutive */
+    if (no) {}
+    
+    /* sandwich */
+    if (sa) {}
+    /* kropki */
+    if (kr) {}
+    /* xv */
+    if (xv) {}
+    
+    /* thermo */
+    if (th) {}
+    /* palidrome */
+    if (pa) {}
+    /* arrow */
+    if (ar) {}
+    
+    /* diagonal (bishop) */
+    if (di) {}
+    /* king */
+    if (ki) {}
+    /* knight */
+    if (kn) {}
+    
     return invalid;
 }
 /* set numbers */
@@ -150,7 +177,7 @@ function rules() {
                 invalid = true;
                 A2tried.push(number);
             } else {
-                invalid = rules();
+                invalid = rules(2, 1);
                 A2tried.push(number);
             }
         }
