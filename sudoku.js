@@ -18,10 +18,10 @@
     const Y7 = new Array(9);
     const Y8 = new Array(9);
 
-    const A1tried = new Array(9);
-    const A2tried = new Array(9);
-    const A3tried = new Array(7);
-    const A4tried = new Array(7);
+    const A1tried = new Array();
+    const A2tried = new Array();
+    const A3tried = new Array();
+    const A4tried = new Array();
     const A5tried = new Array(7);
     const A6tried = new Array(7);
     const A7tried = new Array(7);
@@ -108,20 +108,38 @@
     const I8tried = new Array(7);
     const I9tried = new Array(7);
 }
+/* set rules */
+function rules(){
+    
+}
 /* set numbers */
 {
-    function a1() {
-       
-    }
+    var number = 0;
+    var invalid = true;
+    function a1() {}
     function a2() {
-        var invalid = true;
+        invalid = true;
         while (invalid && A2tried.length < 9) {
-            var number = Math.floor(Math.random()*9);
-            while (tried.includes(number) && tried.length < 8) {
-                number = Math.floor(Math.random()*9);
-
+            number = Math.floor(Math.random()*9);
+            invalid = false;
+            if (A2tried.includes(number)) {
+                invalid = true;
+            } else if (X1.includes(number) || Y2.includes(number)) {
+                invalid = true;
+                A2tried.push(number);
+            } else {
+                invalid = rules();
+                A2tried.push(number);
             }
-        }}
+        }
+        if (invalid) {
+            A2tried = []
+            a1();
+        } else {
+            X1[1] = number;
+            Y2[0] = number;
+        }
+    }
     function a3() {}
     function a4() {}
     function a5() {}
