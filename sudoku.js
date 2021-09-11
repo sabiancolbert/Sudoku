@@ -1,3 +1,5 @@
+/* create arrays */
+{
 const X1 = new Array(8);
 const X2 = new Array(8);
 const X3 = new Array(8);
@@ -105,7 +107,7 @@ const I6tried = new Array(7);
 const I7tried = new Array(7);
 const I8tried = new Array(7);
 const I9tried = new Array(7);
-
+}
 /* set numbers */
 {
     a1();
@@ -197,9 +199,11 @@ const I9tried = new Array(7);
     i7();
     i8();
     i9();
-
-
-
+}
+/* unsolve puzzle */
+{
+    
+}
 
 
     const tried = new Array();
