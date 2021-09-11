@@ -135,13 +135,9 @@ function rules() {
                 A2tried.push(number);
             }
         }
-        if (invalid) {
-            A2tried = []
-            a1();
-        } else {
-            X1[1] = number;
-            Y2[0] = number;
-        }
+        X1[1] = number;
+        Y2[0] = number;
+
     }
     function a3() {}
     function a4() {}
