@@ -134,28 +134,28 @@ function rules(x, y) {
     if (ca) {}
     /* non consecutive */
     if (no) {}
-    
+
     /* sandwich */
     if (sa) {}
     /* kropki */
     if (kr) {}
     /* xv */
     if (xv) {}
-    
+
     /* thermo */
     if (th) {}
     /* palidrome */
     if (pa) {}
     /* arrow */
     if (ar) {}
-    
+
     /* diagonal (bishop) */
     if (di) {}
     /* king */
     if (ki) {}
     /* knight */
     if (kn) {}
-    
+
     return invalid;
 }
 /* set numbers */
@@ -181,9 +181,13 @@ function rules(x, y) {
                 A2tried.push(number);
             }
         }
-        X1[1] = number;
-        Y2[0] = number;
-
+        if (invalid) {
+            A2tried = []
+            a1();
+        } else {
+            X1[1] = number;
+            Y2[0] = number;
+        }
     }
     function a3() {}
     function a4() {}
