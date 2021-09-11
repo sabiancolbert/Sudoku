@@ -110,7 +110,9 @@
 }
 /* set rules */
 function rules(){
+    var invalid = false;
     
+    return invalid;
 }
 /* set numbers */
 {
