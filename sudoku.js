@@ -1,4 +1,7 @@
-/* create arrays */
+/* create variables */
+var number;
+var invalid = true;
+
 const X1 = new Array(9);
 const X2 = new Array(9);
 const X3 = new Array(9);
@@ -106,6 +109,22 @@ const I6tried = new Array();
 const I7tried = new Array();
 const I8tried = new Array();
 const I9tried = new Array();
+
+var co = false;
+var ca = false;
+var no = false;
+
+var sa = false;
+var kr = false;
+var xv = false;
+
+var th = false;
+var pa = false;
+var ar = false;
+
+var di = false;
+var ki = false;
+var kn = false;
 /* set rules */
 function rules() {
     var invalid = false;
