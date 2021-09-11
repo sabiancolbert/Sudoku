@@ -110,7 +110,16 @@
 }
 /* set numbers */
 {
-    function a1() {}
+    function a1() {
+        var invalid = true;
+        while (invalid) {
+            var number = Math.floor(Math.random()*9);
+            while (tried.includes(number) && tried.length < 8) {
+                number = Math.floor(Math.random()*9);
+
+            }
+        }
+    }
     function a2() {}
     function a3() {}
     function a4() {}
@@ -215,20 +224,3 @@
 }
 /* unsolve puzzle */
 {}
-
-
-const tried = new Array();
-var invalid = true;
-while (invalid) {
-var number = Math.floor(Math.random()*9);
-while (tried.includes(number) && tried.length < 8) {
-number = Math.floor(Math.random()*9);
-
-}
-}
-//if tried contains number then broke
-}
-}
-
-/* attempt to unsolve to difficulty */
-//remember variation settings
