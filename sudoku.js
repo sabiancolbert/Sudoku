@@ -20,7 +20,6 @@ const Y6 = new Array(9);
 const Y7 = new Array(9);
 const Y8 = new Array(9);
 
-const A1tried = new Array();
 const A2tried = new Array();
 const A3tried = new Array();
 const A4tried = new Array();
