@@ -161,9 +161,14 @@ function rules(x, y) {
 {
     /* create cell functions */
     function a1() {
+        if(A1tried.length < 9){
         number = Math.floor(Math.random()*9);
         X1[0] = number;
         Y1[0] = number;
+        }
+        else{
+            //HERE ERROR
+        }
     }
     function a2() {
         invalid = true;
@@ -188,7 +193,29 @@ function rules(x, y) {
             Y2[0] = number;
         }
     }
-    function a3() {}
+    function a3() {
+        invalid = true;
+        while (invalid && A3tried.length < 9) {
+            number = Math.floor(Math.random()*9);
+            invalid = false;
+            if (A3tried.includes(number)) {
+                invalid = true;
+            } else if (X1.includes(number)) {
+                invalid = true;
+                A3tried.push(number);
+            } else {
+                invalid = rules(4, 1);
+                A3tried.push(number);
+            }
+        }
+        if (invalid) {
+            A3tried = []
+            a2();
+        } else {
+            X1[2] = number;
+            Y3[0] = number;
+        }
+    }
     function a4() {}
     function a5() {}
     function a6() {}
