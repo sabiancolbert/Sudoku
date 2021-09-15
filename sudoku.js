@@ -2,23 +2,24 @@
 var number;
 var invalid = true;
 
-const X1 = new Array(9);
-const X2 = new Array(9);
-const X3 = new Array(9);
-const X4 = new Array(9);
-const X5 = new Array(9);
-const X6 = new Array(9);
-const X7 = new Array(9);
-const X8 = new Array(9);
+const X1 = new Array(10);
+const X2 = new Array(10);
+const X3 = new Array(10);
+const X4 = new Array(10);
+const X5 = new Array(10);
+const X6 = new Array(10);
+const X7 = new Array(10);
+const X8 = new Array(10);
 
-const Y1 = new Array(9);
-const Y2 = new Array(9);
-const Y3 = new Array(9);
-const Y4 = new Array(9);
-const Y5 = new Array(9);
-const Y6 = new Array(9);
-const Y7 = new Array(9);
-const Y8 = new Array(9);
+const Y1 = new Array(10);
+const Y2 = new Array(10);
+const Y3 = new Array(10);
+const Y4 = new Array(10);
+const Y5 = new Array(10);
+const Y6 = new Array(10);
+const Y7 = new Array(10);
+const Y8 = new Array(10)
+//0,0 wont be used. starts at 1,1 for simplicity;
 
 const A2tried = new Array();
 const A3tried = new Array();
@@ -163,11 +164,11 @@ function rules(x, y) {
     function a1() {
         if(A1tried.length < 9){
         number = Math.floor(Math.random()*9);
-        X1[0] = number;
-        Y1[0] = number;
+        X1[1] = number;
+        Y1[1] = number;
         }
         else{
-            //HERE ERROR
+            alert("No possible games with these settings.");
         }
     }
     function a2() {
@@ -189,8 +190,8 @@ function rules(x, y) {
             A2tried = []
             a1();
         } else {
-            X1[1] = number;
-            Y2[0] = number;
+            X1[2] = number;
+            Y2[1] = number;
         }
     }
     function a3() {
@@ -204,7 +205,7 @@ function rules(x, y) {
                 invalid = true;
                 A3tried.push(number);
             } else {
-                invalid = rules(4, 1);
+                invalid = rules(3, 1);
                 A3tried.push(number);
             }
         }
@@ -212,13 +213,79 @@ function rules(x, y) {
             A3tried = []
             a2();
         } else {
-            X1[2] = number;
-            Y3[0] = number;
+            X1[3] = number;
+            Y3[1] = number;
         }
     }
-    function a4() {}
-    function a5() {}
-    function a6() {}
+    function a4() {
+        invalid = true;
+        while (invalid && A4tried.length < 9) {
+            number = Math.floor(Math.random()*9);
+            invalid = false;
+            if (A4tried.includes(number)) {
+                invalid = true;
+            } else if (X1.includes(number)) {
+                invalid = true;
+                A4tried.push(number);
+            } else {
+                invalid = rules(4, 1);
+                A4tried.push(number);
+            }
+        }
+        if (invalid) {
+            A4tried = []
+            a3();
+        } else {
+            X1[4] = number;
+            Y3[1] = number;
+        }
+    }
+    function a5() {
+        invalid = true;
+        while (invalid && A5tried.length < 9) {
+            number = Math.floor(Math.random()*9);
+            invalid = false;
+            if (A5tried.includes(number)) {
+                invalid = true;
+            } else if (X1.includes(number)) {
+                invalid = true;
+                A5tried.push(number);
+            } else {
+                invalid = rules(5, 1);
+                A5tried.push(number);
+            }
+        }
+        if (invalid) {
+            A5tried = []
+            a4();
+        } else {
+            X1[5] = number;
+            Y3[1] = number;
+        }
+    }
+    function a6() {
+        invalid = true;
+        while (invalid && A6tried.length < 9) {
+            number = Math.floor(Math.random()*9);
+            invalid = false;
+            if (A6tried.includes(number)) {
+                invalid = true;
+            } else if (X1.includes(number)) {
+                invalid = true;
+                A6tried.push(number);
+            } else {
+                invalid = rules(6, 1);
+                A6tried.push(number);
+            }
+        }
+        if (invalid) {
+            A6tried = []
+            a5();
+        } else {
+            X1[6] = number;
+            Y3[1] = number;
+        }
+    }
     function a7() {}
     function a8() {}
     function a9() {}
