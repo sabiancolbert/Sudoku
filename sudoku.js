@@ -237,7 +237,7 @@ function rules(x, y) {
             a3();
         } else {
             X1[4] = number;
-            Y3[1] = number;
+            Y4[1] = number;
         }
     }
     function a5() {
@@ -260,7 +260,7 @@ function rules(x, y) {
             a4();
         } else {
             X1[5] = number;
-            Y3[1] = number;
+            Y5[1] = number;
         }
     }
     function a6() {
@@ -283,12 +283,78 @@ function rules(x, y) {
             a5();
         } else {
             X1[6] = number;
-            Y3[1] = number;
+            Y6[1] = number;
         }
     }
-    function a7() {}
-    function a8() {}
-    function a9() {}
+    function a7() {
+        invalid = true;
+        while (invalid && A7tried.length < 9) {
+            number = Math.floor(Math.random()*9);
+            invalid = false;
+            if (A7tried.includes(number)) {
+                invalid = true;
+            } else if (X1.includes(number)) {
+                invalid = true;
+                A7tried.push(number);
+            } else {
+                invalid = rules(7, 1);
+                A7tried.push(number);
+            }
+        }
+        if (invalid) {
+            A7tried = []
+            a6();
+        } else {
+            X1[7] = number;
+            Y7[1] = number;
+        }
+    }
+    function a8() {
+        invalid = true;
+        while (invalid && A8tried.length < 9) {
+            number = Math.floor(Math.random()*9);
+            invalid = false;
+            if (A8tried.includes(number)) {
+                invalid = true;
+            } else if (X1.includes(number)) {
+                invalid = true;
+                A8tried.push(number);
+            } else {
+                invalid = rules(8, 1);
+                A8tried.push(number);
+            }
+        }
+        if (invalid) {
+            A8tried = []
+            a7();
+        } else {
+            X1[8] = number;
+            Y8[1] = number;
+        }
+    }
+    function a9() {
+        invalid = true;
+        while (invalid && A9tried.length < 9) {
+            number = Math.floor(Math.random()*9);
+            invalid = false;
+            if (A9tried.includes(number)) {
+                invalid = true;
+            } else if (X1.includes(number)) {
+                invalid = true;
+                A9tried.push(number);
+            } else {
+                invalid = rules(9, 1);
+                A9tried.push(number);
+            }
+        }
+        if (invalid) {
+            A9tried = []
+            a8();
+        } else {
+            X1[9] = number;
+            Y9[1] = number;
+        }
+    }
 
     function b1() {
         invalid = true;
