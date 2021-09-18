@@ -1,3 +1,7 @@
+/* ------------- */
+/* game creation */
+/* ------------- */
+
 /* create variables */
 var number;
 var invalid = true;
@@ -475,3 +479,15 @@ function rules(x, y) {
 }
 /* unsolve puzzle */
 {}
+/* -------- */
+/* gameplay */
+/* -------- */
+
+/* set variables */
+var note = false;
+var selection = 0;
+//0=erase 1-9=#
+
+function set(cell){
+getElementById(cell).innerHTML = "h";
+}
