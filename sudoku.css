@@ -1,10 +1,12 @@
 body{
     background-color: black;
 }
-table, th, td {
+table, td {
   border: 1px solid black;
   border-collapse: collapse;
-}
-th, td {
   background-color: white;
+}
+td{
+width:30px;
+height:30px;
 }
