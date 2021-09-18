@@ -1,4 +1,4 @@
 function set(){
-getElementById("a1").innerHTML = "g";
+Document.getElementById("a1").innerHTML = "g";
 }
-getElementById("a2").innerHTML = "g";
+Document.getElementById("a2").innerHTML = "g";
