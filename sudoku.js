@@ -166,12 +166,11 @@ function rules(x, y) {
 {
     /* create cell functions */
     function a1() {
-        if(A1tried.length < 9){
-        number = Math.floor(Math.random()*9);
-        X1[1] = number;
-        Y1[1] = number;
-        }
-        else{
+        if (A1tried.length < 9) {
+            number = Math.floor(Math.random()*9);
+            X1[1] = number;
+            Y1[1] = number;
+        } else {
             alert("No possible games with these settings.");
         }
     }
@@ -488,6 +487,6 @@ var note = false;
 var selection = 0;
 //0=erase 1-9=#
 
-function set(cell){
-getElementById(cell).innerHTML = "h";
+function set(cell) {
+    getElementById(cell).innerHTML = "h";
 }
