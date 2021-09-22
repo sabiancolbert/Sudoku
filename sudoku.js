@@ -487,6 +487,6 @@ var note = false;
 var selection = 0;
 //0=erase 1-9=#
 
-function set(cell) {
-    document.getElementById(cell).innerHTML = selection;
+function set(event) {
+    event.target.innerHTML = selection;
 }
