@@ -483,13 +483,13 @@ function rules(x, y) {
 /* -------- */
 
 /* set variables */
-var note = false;
-var selection = "0";
+const note = false;
+const selection = "0";
 //0=erase 1-9=#
 
 function set(cell) {
     document.getElementById(cell).innerHTML = selection.toString();
 }
 function onload(){
-    document.getElementById("js").innerHTML = "     2    ";
+    document.getElementById("js").innerHTML = "     3    ";
 }
