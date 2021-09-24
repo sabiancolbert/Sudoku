@@ -488,8 +488,8 @@ const selection = "0";
 //0=erase 1-9=#
 
 function set(cell) {
-    document.getElementById(cell).innerHTML = selection.toString();
+    document.getElementById(cell).innerHTML = 3;
 }
 function onload(){
-    document.getElementById("js").innerHTML = "     3    ";
+    document.getElementById("js").innerHTML = "     4    ";
 }
