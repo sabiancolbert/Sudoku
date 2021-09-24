@@ -4,12 +4,12 @@ body {
     text-align:center;
 }
 td, #selection {
-    width: 50px;
+    width: 30px;
     height: 30px;
     color:black;
     background-color: white;
     border: 1px solid black;
 }
 p{
-    background-color:blue;
+    background-color:yellow;
 }
