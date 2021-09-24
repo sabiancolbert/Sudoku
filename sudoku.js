@@ -492,5 +492,5 @@ function set(cell) {
     document.getElementById(cell).innerHTML = text;
 }
 function onload(){
-    document.getElementById("js").innerHTML = "     4    ";
+    document.getElementById("js").innerHTML = "     5    ";
 }
