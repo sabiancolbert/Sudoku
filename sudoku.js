@@ -385,7 +385,7 @@ function b1() {
 }
 function onload() {
     //javascript version number for testing
-    document.getElementById("js").innerHTML = "     0    ";
+    document.getElementById("js").innerHTML = "     1    ";
     /* run cell functions */
     {
         a1();
