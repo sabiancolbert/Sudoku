@@ -484,11 +484,12 @@ function rules(x, y) {
 
 /* set variables */
 const note = false;
-const selection = "0";
+const selection = 0;
 //0=erase 1-9=#
 
 function set(cell) {
-    document.getElementById(cell).innerHTML = 3;
+    var text = selection;
+    document.getElementById(cell).innerHTML = text;
 }
 function onload(){
     document.getElementById("js").innerHTML = "     4    ";
