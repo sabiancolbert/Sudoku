@@ -485,8 +485,8 @@ function rules(x, y) {
 //0=erase 1-9=#
 
 function set(cell) {
-    document.getElementById(cell).innerHTML = document.getElementById("cellButton").innerHTML;
+    document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
 }
 function onload(){
-    document.getElementById("js").innerHTML = "     6    ";
+    document.getElementById("js").innerHTML = "     0    ";
 }
