@@ -383,6 +383,7 @@ function b1() {
         Y2[0] = number;
     }
 }
+
 /* run cell functions */
 {
     a1();
@@ -475,18 +476,14 @@ function b1() {
     i8();
     i9();
 }
-
 /* unsolve puzzle */
 {}
 /* -------- */
 /* gameplay */
 /* -------- */
-
-//0=erase 1-9=#
-
 function set(cell) {
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
 }
 function onload() {
-    document.getElementById("js").innerHTML = "     0    ";
+    
 }
