@@ -1,9 +1,9 @@
 body {
-   background-color: black;
-   color:white;
+    background-color: black;
+    color:white;
     text-align:center;
 }
-td, #selection {
+td, #selectionCell {
     width: 30px;
     height: 30px;
     color:black;
@@ -11,5 +11,5 @@ td, #selection {
     border: 1px solid black;
 }
 p{
-    background-color:yellow;
+    background-color:white;
 }
