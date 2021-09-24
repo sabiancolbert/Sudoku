@@ -5,6 +5,7 @@
 /* create variables */
 var number;
 var invalid = true;
+const setNumbers = new Array();
 
 const X1 = new Array(10);
 const X2 = new Array(10);
@@ -480,12 +481,21 @@ function onload() {
     }
     /* unsolve puzzle */
     {}
+    /* display puzzle */
+    {
+        //HERE use a cool alrpgithm for this
+        document.getElementById('a1').innerHTML = X1(1);
+        //if cell not blank, add to setNumbers
+    }
 }
 /* -------- */
 /* gameplay */
 /* -------- */
 function set(cell) {
-    //set cell
-    document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
+    /* set cell */
+    if (!setNumbers.includes(cell)) {
+        document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
+    }
+    /* check solvability */
     //if check is on, solve ENTIRE PUZZLE (incase there are multiple answers)
 }
