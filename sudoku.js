@@ -482,14 +482,10 @@ function rules(x, y) {
 /* gameplay */
 /* -------- */
 
-/* set variables */
-const note = false;
-var selection = 0;
 //0=erase 1-9=#
 
 function set(cell) {
-    var text = selection;
-    document.getElementById(cell).innerHTML = text;
+    document.getElementById(cell).innerHTML = document.getElementById("cellButton").innerHTML;
 }
 function onload(){
     document.getElementById("js").innerHTML = "     6    ";
