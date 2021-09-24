@@ -484,7 +484,7 @@ function rules(x, y) {
 
 /* set variables */
 const note = false;
-const selection = 0;
+var selection = 0;
 //0=erase 1-9=#
 
 function set(cell) {
@@ -492,5 +492,5 @@ function set(cell) {
     document.getElementById(cell).innerHTML = text;
 }
 function onload(){
-    document.getElementById("js").innerHTML = "     5    ";
+    document.getElementById("js").innerHTML = "     6    ";
 }
