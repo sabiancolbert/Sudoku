@@ -485,5 +485,7 @@ function onload() {
 /* gameplay */
 /* -------- */
 function set(cell) {
+    //set cell
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
+    //if check is on, solve ENTIRE PUZZLE (incase there are multiple answers)
 }
