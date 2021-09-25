@@ -439,7 +439,7 @@ invalid = true;
 function onload() {
     console.log("hello world");
     //javascript version number for testing
-    document.getElementById("js").innerHTML = "     2   ";
+    document.getElementById("js").innerHTML = "     3   ";
     /* run cell functions */
     a1();
     /* unsolve puzzle */
