@@ -130,6 +130,11 @@ var ar = false;
 var di = false;
 var ki = false;
 var kn = false;
+
+
+
+
+
 /* set rules */
 function rules(x, y) {
     var invalid = false;
@@ -163,7 +168,10 @@ function rules(x, y) {
 
     return invalid;
 }
-/* set numbers */
+
+
+
+
 
 /* create cell functions */
 function a1() {
@@ -171,6 +179,7 @@ function a1() {
         number = Math.floor(Math.random()*9);
         X1[1] = number;
         Y1[1] = number;
+        a2();
     } else {
         alert("No possible games with these settings.");
     }
@@ -196,6 +205,7 @@ function a2() {
     } else {
         X1[2] = number;
         Y2[1] = number;
+        a3();
     }
 }
 function a3() {
@@ -219,6 +229,7 @@ function a3() {
     } else {
         X1[3] = number;
         Y3[1] = number;
+        a4();
     }
 }
 function a4() {
@@ -242,6 +253,7 @@ function a4() {
     } else {
         X1[4] = number;
         Y4[1] = number;
+        a5();
     }
 }
 function a5() {
@@ -265,6 +277,7 @@ function a5() {
     } else {
         X1[5] = number;
         Y5[1] = number;
+        a6();
     }
 }
 function a6() {
@@ -288,6 +301,7 @@ function a6() {
     } else {
         X1[6] = number;
         Y6[1] = number;
+        a7();
     }
 }
 function a7() {
@@ -311,6 +325,7 @@ function a7() {
     } else {
         X1[7] = number;
         Y7[1] = number;
+        a8();
     }
 }
 function a8() {
@@ -334,6 +349,7 @@ function a8() {
     } else {
         X1[8] = number;
         Y8[1] = number;
+        a9();
     }
 }
 function a9() {
@@ -357,6 +373,7 @@ function a9() {
     } else {
         X1[9] = number;
         Y9[1] = number;
+        b1();
     }
 }
 
@@ -367,7 +384,7 @@ function b1() {
         invalid = false;
         if (B1tried.includes(number)) {
             invalid = true;
-        } else if (X2.includes(number) || Y1.includes(number)) {
+        } else if (Y1.includes(number)){
             invalid = true;
             B1tried.push(number);
         } else {
@@ -376,114 +393,60 @@ function b1() {
         }
     }
     if (invalid) {
-        //HERE uuuuuuuuh
-        B1tried = []
-        b1();
+        B1tried = [];
+        A9tried = [];
+        A8tried = [];
+        A7tried = [];
+        A6tried = [];
+        A5tried = [];
+        A4tried = [];
+        A3tried = [];
+        A2tried = [];
+        a1();
     } else {
-        X1[1] = number;
-        Y2[0] = number;
+        X2[1] = number;
+        Y1[1] = number;
+        b2();
     }
 }
+function b2(){
+invalid = true;
+    while (invalid && B2tried.length < 9) {
+        number = Math.floor(Math.random()*9);
+        invalid = false;
+        if (B2tried.includes(number)) {
+            invalid = true;
+        } else if (Y2.includes(number) || X2.includes(number)){
+            invalid = true;
+            B2tried.push(number);
+        } else {
+            invalid = rules();
+            B2tried.push(number);
+        }
+    }
+    if (invalid) {
+        B2tried = [];
+        b1();
+    } else {
+        X2[2] = number;
+        Y2[2] = number;
+        b3();
+    }
+}
+
+
+
 function onload() {
     //javascript version number for testing
     document.getElementById("js").innerHTML = "     1    ";
     /* run cell functions */
-    {
-        a1();
-        a2();
-        a3();
-        a4();
-        a5();
-        a6();
-        a7();
-        a8();
-        a9();
-
-        b1();
-        b2();
-        b3();
-        b4();
-        b5();
-        b6();
-        b7();
-        b8();
-        b9();
-
-        c1();
-        c2();
-        c3();
-        c4();
-        c5();
-        c6();
-        c7();
-        c8();
-        c9();
-
-        d1();
-        d2();
-        d3();
-        d4();
-        d5();
-        d6();
-        d7();
-        d8();
-        d9();
-
-        e1();
-        e2();
-        e3();
-        e4();
-        e5();
-        e6();
-        e7();
-        e8();
-        e9();
-
-        f1();
-        f2();
-        f3();
-        f4();
-        f5();
-        f6();
-        f7();
-        f8();
-        f9();
-
-        g1();
-        g2();
-        g3();
-        g4();
-        g5();
-        g6();
-        g7();
-        g8();
-        g9();
-
-        h1();
-        h2();
-        h3();
-        h4();
-        h5();
-        h6();
-        h7();
-        h8();
-        h9();
-
-        i1();
-        i2();
-        i3();
-        i4();
-        i5();
-        i6();
-        i7();
-        i8();
-        i9();
-    }
+    a1();
     /* unsolve puzzle */
     {}
     /* display puzzle */
     {
         //HERE use a cool alrpgithm for this
+        //alsp make them bold or somwthing
         document.getElementById('a1').innerHTML = X1(1);
         //if cell not blank, add to setNumbers
     }
