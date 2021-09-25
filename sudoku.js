@@ -437,6 +437,7 @@ invalid = true;
 
 
 function onload() {
+    console.log("hello world");
     //javascript version number for testing
     document.getElementById("js").innerHTML = "     2   ";
     /* run cell functions */
