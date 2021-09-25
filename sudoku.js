@@ -438,7 +438,7 @@ invalid = true;
 
 function onload() {
     //javascript version number for testing
-    document.getElementById("js").innerHTML = "     1    ";
+    document.getElementById("js").innerHTML = "     2   ";
     /* run cell functions */
     a1();
     /* unsolve puzzle */
