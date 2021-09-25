@@ -26,6 +26,7 @@ const Y7 = new Array(10);
 const Y8 = new Array(10)
 //0,0 wont be used. starts at 1,1 for simplicity;
 
+const A1tried = new Array();
 const A2tried = new Array();
 const A3tried = new Array();
 const A4tried = new Array();
