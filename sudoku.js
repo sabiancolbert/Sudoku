@@ -436,7 +436,30 @@ function b2() {
     b3();
   }
 }
-
+function b3{
+  invalid = true;
+  while (invalid && B3tried.length < 9) {
+    number = Math.floor(Math.random()*9);
+    invalid = false;
+    if (B3tried.includes(number)) {
+      invalid = true;
+    } else if (Y3.includes(number) || X2.includes(number)) {
+      invalid = true;
+      B3tried.push(number);
+    } else {
+      invalid = rules();
+      B3tried.push(number);
+    }
+  }
+  if (invalid) {
+    B3tried = [];
+    b2();
+  } else {
+    X2[3] = number;
+    Y3[2] = number;
+    b4();
+  }
+}
 
 
 function onload() {
