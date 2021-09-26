@@ -440,14 +440,10 @@ function b2() {
 
 
 function onload() {
-  if (X1[1] > 1) {
-    console.log("works");
-  } else {
-    console.log("actualy works");
-  }
-  console.log("hello");
+  X2[2] = 6;
+  console.log("&"+ get(1, 1, 1, 1);
   //javascript version number for testing
-  document.getElementById("js").innerHTML = "     878   ";
+  document.getElementById("js").innerHTML = "     1   ";
   /* run cell functions */
   a1();
   /* unsolve puzzle */
@@ -471,30 +467,9 @@ function set(cell) {
   /* check solvability */
   //if check is on, solve ENTIRE PUZZLE (incase there are multiple answers)
 }
-function get(cell, x, y) {
-  var targetX = cell.substring(1, 2);
-  var targetY;
-  if (cell.substring(0, 1) == "a") {
-    targetY = 1;
-  } else if (cell.substring(0, 1) == "b") {
-    targetY = 2;
-  } else if (cell.substring(0, 1) == "c") {
-    targetY = 3;
-  } else if (cell.substring(0, 1) == "d") {
-    targetY = 4;
-  } else if (cell.substring(0, 1) == "e") {
-    targetY = 5;
-  } else if (cell.substring(0, 1) == "f") {
-    targetY = 6;
-  } else if (cell.substring(0, 1) == "g") {
-    targetY = 7;
-  } else if (cell.substring(0, 1) == "h") {
-    targetY = 8;
-  } else {
-    targetY = 9;
-  }
-  targetX += x;
-  targetY += y;
+function get(cellX, cellY, x, y) {
+  cellX += x;
+  cellY += y;
   if (targetX > 0 && targetX < 10 && targetY > 0 && targetY < 10) {
     if (targetY == 1) {
       return X1[targetX];
