@@ -440,13 +440,11 @@ function b2() {
 function onload() {
   console.log("hello worlhyyggyyd");
   //javascript version number for testing
-  document.getElementById("js").innerHTML = "     8   ";
+  document.getElementById("js").innerHTML = "     878   ";
   /* run cell functions */
   a1();
   /* unsolve puzzle */
-  {
-    
-  }
+  {}
   /* display puzzle */
   {
     //HERE use a cool alrpgithm for this
@@ -466,7 +464,7 @@ function set(cell) {
   /* check solvability */
   //if check is on, solve ENTIRE PUZZLE (incase there are multiple answers)
 }
-function get(cell, x, y){
-  var targetX = cell.substring(1,2);
+function get(cell, x, y) {
+  var targetX = cell.substring(1, 2);
   var targetY;
 }
