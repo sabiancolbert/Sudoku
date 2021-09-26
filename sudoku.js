@@ -438,8 +438,10 @@ function b2() {
 
 
 function onload() {
-  var string = "1234";
-  console.log("hello" + string.substring(1, 2));
+  if(X1[1] > 1){
+    console.log("works");
+  }
+  console.log("hello");
   //javascript version number for testing
   document.getElementById("js").innerHTML = "     878   ";
   /* run cell functions */
@@ -468,10 +470,13 @@ function set(cell) {
 function get(cell, x, y) {
   var targetX = cell.substring(1, 2);
   var targetY;
-if(cell.substring(0,1)=="a"){
-  targetY = 1;
-}
-else if(cell.substring(0,1)=="a"){
-  targetY = 1;
-}
+  if (cell.substring(0, 1) == "a") {
+    targetY = 1;
+  } else if (cell.substring(0, 1) == "b") {
+    targetY = 2;
+  }
+  //HERE more
+targetX+=x;
+targetY+=y;
+
 }
