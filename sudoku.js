@@ -472,12 +472,15 @@ function onload() {
   {}
   /* display puzzle */
   {
+    console.log("works");
     //HERE use a cool alrpgithm for this
     //alsp make them bold or somwthing
     //HERE making cool algorithm
     document.getElementById('a1').innerHTML = X1[1];
     var counter = 1;
-    X1.foreach(x => {document.getElementById("a" + counter).innerHTML = x; counter++;});
+    X1.foreach(x => {
+      document.getElementById("a" + counter).innerHTML = x; counter++;
+    });
     //if cell not blank, add to setNumbers
   }
 }
