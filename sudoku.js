@@ -3,10 +3,11 @@
 /* ------------- */
 
 /* create variables */
-var number;
-var invalid = true;
+const number = 0;
+const invalid = true;
 const setNumbers = new Array(0);
 
+//for construction and destruction
 const X1 = new Array(10);
 const X2 = new Array(10);
 const X3 = new Array(10);
@@ -17,6 +18,7 @@ const X7 = new Array(10);
 const X8 = new Array(10);
 const X9 = new Array(10);
 
+//for construction and solution
 const Y1 = new Array(10);
 const Y2 = new Array(10);
 const Y3 = new Array(10);
@@ -26,9 +28,10 @@ const Y6 = new Array(10);
 const Y7 = new Array(10);
 const Y8 = new Array(10);
 const Y9 = new Array(10);
+
 //0,0 wont be used. starts at 1,1 for simplicity;
 
-const A1tried = new Array([]);
+const A1tried = new Array(0);
 const A2tried = new Array(0);
 const A3tried = new Array(0);
 const A4tried = new Array(0);
