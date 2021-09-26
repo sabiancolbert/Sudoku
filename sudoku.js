@@ -443,7 +443,7 @@ function onload() {
   console.log("start get test");
   X2[2] = 6;
   console.log("&"+ get(1, 1, 1, 1)); //HERE get doesnt work
-console.log("end");
+  console.log("end");
   //javascript version number for testing
   document.getElementById("js").innerHTML = "     1   ";
   /* run cell functions */
@@ -472,25 +472,25 @@ function set(cell) {
 function get(cellX, cellY, x, y) {
   cellX += x;
   cellY += y;
-  if (targetX > 0 && targetX < 10 && targetY > 0 && targetY < 10) {
-    if (targetY == 1) {
-      return X1[targetX];
-    } else if (targetY == 2) {
-      return X2[targetX];
-    } else if (targetY == 3) {
-      return X3[targetX];
-    } else if (targetY == 4) {
-      return X4[targetX];
-    } else if (targetY == 5) {
-      return X5[targetX];
-    } else if (targetY == 6) {
-      return X6[targetX];
-    } else if (targetY == 7) {
-      return X7[targetX];
-    } else if (targetY == 8) {
-      return X8[targetX];
-    } else if (targetY == 9) {
-      return X9[targetX];
+  if (cellX > 0 && cellX < 10 && cellY > 0 && cellY < 10) {
+    if (cellY == 1) {
+      return X1[cellX];
+    } else if (cellY == 2) {
+      return X2[cellX];
+    } else if (cellY == 3) {
+      return X3[cellX];
+    } else if (cellY == 4) {
+      return X4[cellX];
+    } else if (cellY == 5) {
+      return X5[cellX];
+    } else if (cellY == 6) {
+      return X6[cellX];
+    } else if (cellY == 7) {
+      return X7[cellX];
+    } else if (cellY == 8) {
+      return X8[cellX];
+    } else if (cellY == 9) {
+      return X9[cellX];
     }
   } else {
     return 0;
