@@ -457,8 +457,6 @@ function b3 () {
   } else {
     X2[3] = number;
     Y3[2] = number;
-     //HERE remove this
-  console.log("&"+ X1[1]);
     b4();
   }
 }
@@ -476,7 +474,10 @@ function onload() {
   {
     //HERE use a cool alrpgithm for this
     //alsp make them bold or somwthing
-    document.getElementById('a1').innerHTML = X1(1);
+//HERE making cool algorithm
+    document.getElementById('a1').innerHTML = X1[1];
+    var counter = 1;
+    X1.foreach(x => document.getElementById("a" + counter).innerHTML = x; counter++;);
     //if cell not blank, add to setNumbers
   }
 }
