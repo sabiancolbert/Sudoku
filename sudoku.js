@@ -438,7 +438,8 @@ function b2() {
 
 
 function onload() {
-  console.log("hello worlhyyggyyd");
+  var string = "1234";
+  console.log("hello" + string.substring(1,2););
   //javascript version number for testing
   document.getElementById("js").innerHTML = "     878   ";
   /* run cell functions */
@@ -467,4 +468,5 @@ function set(cell) {
 function get(cell, x, y) {
   var targetX = cell.substring(1, 2);
   var targetY;
+  
 }
