@@ -15,6 +15,7 @@ const X5 = new Array(10);
 const X6 = new Array(10);
 const X7 = new Array(10);
 const X8 = new Array(10);
+const X9 = new Array(10);
 
 const Y1 = new Array(10);
 const Y2 = new Array(10);
@@ -24,9 +25,10 @@ const Y5 = new Array(10);
 const Y6 = new Array(10);
 const Y7 = new Array(10);
 const Y8 = new Array(10);
+const Y9 = new Array(10);
 //0,0 wont be used. starts at 1,1 for simplicity;
 
-var A1tried = new Array([]);
+const A1tried = new Array([]);
 const A2tried = new Array(0);
 const A3tried = new Array(0);
 const A4tried = new Array(0);
@@ -438,8 +440,10 @@ function b2() {
 
 
 function onload() {
-  if(X1[1] > 1){
+  if (X1[1] > 1) {
     console.log("works");
+  }
+  else{console.log("actualy works");
   }
   console.log("hello");
   //javascript version number for testing
@@ -476,7 +480,7 @@ function get(cell, x, y) {
     targetY = 2;
   }
   //HERE more
-targetX+=x;
-targetY+=y;
+  targetX += x;
+  targetY += y;
 
 }
