@@ -436,7 +436,7 @@ function b2() {
     b3();
   }
 }
-function b3 (){
+function b3 () {
   invalid = true;
   while (invalid && B3tried.length < 9) {
     number = Math.floor(Math.random()*9);
@@ -457,6 +457,8 @@ function b3 (){
   } else {
     X2[3] = number;
     Y3[2] = number;
+     //HERE remove this
+  console.log("&"+ X1[1]);
     b4();
   }
 }
@@ -468,8 +470,6 @@ function onload() {
   document.getElementById("js").innerHTML = "     1   ";
   /* run cell functions */
   a1();
-  //HERE remove this
-  console.log("&"+ X1[1]);
   /* unsolve puzzle */
   {}
   /* display puzzle */
