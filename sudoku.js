@@ -26,7 +26,7 @@ const Y7 = new Array(10);
 const Y8 = new Array(10);
 //0,0 wont be used. starts at 1,1 for simplicity;
 
-var A1tried = new Array(0);
+var A1tried = new Array([]);
 const A2tried = new Array(0);
 const A3tried = new Array(0);
 const A4tried = new Array(0);
@@ -438,7 +438,7 @@ function b2() {
 
 
 function onload() {
-  console.log("hello world");
+  console.log("hello worlhyyggyyd");
   //javascript version number for testing
   document.getElementById("js").innerHTML = "     3   ";
   /* run cell functions */
