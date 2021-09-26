@@ -457,7 +457,7 @@ function b3 () {
   } else {
     X2[3] = number;
     Y3[2] = number;
-    b4();
+    //b4();
   }
 }
 
