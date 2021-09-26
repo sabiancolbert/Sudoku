@@ -206,7 +206,7 @@ function a2() {
     }
   }
   if (invalid) {
-    A2tried = []
+    A2tried = [];
     a1();
   } else {
     X1[2] = number;
@@ -230,7 +230,7 @@ function a3() {
     }
   }
   if (invalid) {
-    A3tried = []
+    A3tried = [];
     a2();
   } else {
     X1[3] = number;
@@ -254,7 +254,7 @@ function a4() {
     }
   }
   if (invalid) {
-    A4tried = []
+    A4tried = [];
     a3();
   } else {
     X1[4] = number;
@@ -278,7 +278,7 @@ function a5() {
     }
   }
   if (invalid) {
-    A5tried = []
+    A5tried = [];
     a4();
   } else {
     X1[5] = number;
@@ -302,7 +302,7 @@ function a6() {
     }
   }
   if (invalid) {
-    A6tried = []
+    A6tried = [];
     a5();
   } else {
     X1[6] = number;
