@@ -442,8 +442,8 @@ function b2() {
 function onload() {
   if (X1[1] > 1) {
     console.log("works");
-  }
-  else{console.log("actualy works");
+  } else {
+    console.log("actualy works");
   }
   console.log("hello");
   //javascript version number for testing
@@ -482,5 +482,14 @@ function get(cell, x, y) {
   //HERE more
   targetX += x;
   targetY += y;
-
+  if (targetX>0&&targetX<10&&targetY>0&&targetY<10){
+    if (targetY==1){
+      return X1[targetX];
+    }
+    else if (targetY==2){
+      return X2[targetX];
+    }
+    //HERE more
+  }
+  else{return 0;}
 }
