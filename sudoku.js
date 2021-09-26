@@ -440,7 +440,7 @@ function b2() {
 function onload() {
   console.log("hello worlhyyggyyd");
   //javascript version number for testing
-  document.getElementById("js").innerHTML = "     6   ";
+  document.getElementById("js").innerHTML = "     8   ";
   /* run cell functions */
   a1();
   /* unsolve puzzle */
