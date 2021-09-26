@@ -468,5 +468,10 @@ function set(cell) {
 function get(cell, x, y) {
   var targetX = cell.substring(1, 2);
   var targetY;
-
+if(cell.substring(0,1)=="a"){
+  targetY = 1;
+}
+else if(cell.substring(0,1)=="a"){
+  targetY = 1;
+}
 }
