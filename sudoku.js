@@ -440,10 +440,6 @@ function b2() {
 
 
 function onload() {
-  console.log("start get test");
-  X2[2] = 6;
-  console.log("&"+ get(1, 1, 1, 1)); //HERE get doesnt work
-  console.log("end");
   //javascript version number for testing
   document.getElementById("js").innerHTML = "     1   ";
   /* run cell functions */
