@@ -478,18 +478,44 @@ function get(cell, x, y) {
     targetY = 1;
   } else if (cell.substring(0, 1) == "b") {
     targetY = 2;
+  } else if (cell.substring(0, 1) == "c") {
+    targetY = 3;
+  } else if (cell.substring(0, 1) == "d") {
+    targetY = 4;
+  } else if (cell.substring(0, 1) == "e") {
+    targetY = 5;
+  } else if (cell.substring(0, 1) == "f") {
+    targetY = 6;
+  } else if (cell.substring(0, 1) == "g") {
+    targetY = 7;
+  } else if (cell.substring(0, 1) == "h") {
+    targetY = 8;
+  } else {
+    targetY = 9;
   }
-  //HERE more
   targetX += x;
   targetY += y;
-  if (targetX>0&&targetX<10&&targetY>0&&targetY<10){
-    if (targetY==1){
+  if (targetX > 0 && targetX < 10 && targetY > 0 && targetY < 10) {
+    if (targetY == 1) {
       return X1[targetX];
-    }
-    else if (targetY==2){
+    } else if (targetY == 2) {
       return X2[targetX];
+    } else if (targetY == 3) {
+      return X3[targetX];
+    } else if (targetY == 4) {
+      return X4[targetX];
+    } else if (targetY == 5) {
+      return X5[targetX];
+    } else if (targetY == 6) {
+      return X6[targetX];
+    } else if (targetY == 7) {
+      return X7[targetX];
+    } else if (targetY == 8) {
+      return X8[targetX];
+    } else if (targetY == 9) {
+      return X9[targetX];
     }
-    //HERE more
+  } else {
+    return 0;
   }
-  else{return 0;}
 }
