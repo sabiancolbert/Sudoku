@@ -436,7 +436,7 @@ function b2() {
     b3();
   }
 }
-function b3 {
+function b3 (){
   invalid = true;
   while (invalid && B3tried.length < 9) {
     number = Math.floor(Math.random()*9);
@@ -469,7 +469,7 @@ function onload() {
   /* run cell functions */
   a1();
   //HERE remove this
-console.log("&"+ X1[1]);
+  console.log("&"+ X1[1]);
   /* unsolve puzzle */
   {}
   /* display puzzle */
