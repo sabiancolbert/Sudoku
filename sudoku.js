@@ -3,9 +3,9 @@
 /* ------------- */
 
 /* create variables */
-const number = 0;
-const invalid = true;
-const setNumbers = new Array(0);
+var number = 0;
+var invalid = true;
+var setNumbers = new Array(0);
 
 //for construction and destruction
 const X1 = new Array(10);
@@ -475,48 +475,48 @@ function onload() {
       document.getElementById(row + (index+1)).innerHTML = item;
       document.getElementById(row + (index+1)).style = "font-weight:bold;";
       setNumbers.push(row + (index+1));
-      }
-      X1.foreach(setCell("a"));
+    }
+    X1.foreach(setCell("a"));
 
-      document.getElementById("a1").innerHTML = X1[1];
-    }
+    document.getElementById("a1").innerHTML = X1[1];
   }
+}
 
-  /* -------- */
-  /* gameplay */
-  /* -------- */
-  function set(cell) {
-    /* set cell */
-    if (!setNumbers.includes(cell)) {
-      document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-    }
-    /* check solvability */
-    //if check is on, solve ENTIRE PUZZLE (incase there are multiple answers)
+/* -------- */
+/* gameplay */
+/* -------- */
+function set(cell) {
+  /* set cell */
+  if (!setNumbers.includes(cell)) {
+    document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
   }
-  function get(cellX, cellY, x, y) {
-    cellX += x;
-    cellY += y;
-    if (cellX > 0 && cellX < 10 && cellY > 0 && cellY < 10) {
-      if (cellY == 1) {
-        return X1[cellX];
-      } else if (cellY == 2) {
-        return X2[cellX];
-      } else if (cellY == 3) {
-        return X3[cellX];
-      } else if (cellY == 4) {
-        return X4[cellX];
-      } else if (cellY == 5) {
-        return X5[cellX];
-      } else if (cellY == 6) {
-        return X6[cellX];
-      } else if (cellY == 7) {
-        return X7[cellX];
-      } else if (cellY == 8) {
-        return X8[cellX];
-      } else if (cellY == 9) {
-        return X9[cellX];
-      }
-    } else {
-      return 0;
+  /* check solvability */
+  //if check is on, solve ENTIRE PUZZLE (incase there are multiple answers)
+}
+function get(cellX, cellY, x, y) {
+  cellX += x;
+  cellY += y;
+  if (cellX > 0 && cellX < 10 && cellY > 0 && cellY < 10) {
+    if (cellY == 1) {
+      return X1[cellX];
+    } else if (cellY == 2) {
+      return X2[cellX];
+    } else if (cellY == 3) {
+      return X3[cellX];
+    } else if (cellY == 4) {
+      return X4[cellX];
+    } else if (cellY == 5) {
+      return X5[cellX];
+    } else if (cellY == 6) {
+      return X6[cellX];
+    } else if (cellY == 7) {
+      return X7[cellX];
+    } else if (cellY == 8) {
+      return X8[cellX];
+    } else if (cellY == 9) {
+      return X9[cellX];
     }
+  } else {
+    return 0;
   }
+}
