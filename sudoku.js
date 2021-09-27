@@ -479,16 +479,15 @@ function onload() {
     var counter = 1;
     X1.foreach(x => {
       if (x != 0 {
-        //bold, add to setnumbers
+        //set cell bold
+        //push cell to setNumbers
         console.log("works: " + x);
-        document.getElementById("a" + counter).innerHTML = x; 
+        document.getElementById("a" + counter).innerHTML = x;
         counter++;
-      } else {
-        console.log("doesnt work (delete me later)");
       }
-    });
+      });
+    }
   }
-}
 
   /* -------- */
   /* gameplay */
