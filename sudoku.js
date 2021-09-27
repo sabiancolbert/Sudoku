@@ -467,7 +467,7 @@ function b3 () {
 
 function onload() {
   //javascript version number for testing
-  document.getElementById("js").innerHTML = "     1   ";
+  document.getElementById("js").innerHTML = "     5   ";
   /* run cell functions */
   a1();
   /* unsolve puzzle */
