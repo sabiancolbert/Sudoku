@@ -477,7 +477,7 @@ function onload() {
     console.log("works");
     //HERE
     var counter = 1;
-    X1.foreach(x => {
+    X1.foreach(x => function() {
       if (x != 0 {
         //set cell bold
         //push cell to setNumbers
