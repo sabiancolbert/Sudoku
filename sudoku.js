@@ -467,7 +467,6 @@ function b3 () {
 
 function onload() {
   //javascript version number for testing
-
   document.getElementById("js").innerHTML = "     1   ";
   /* run cell functions */
   a1();
@@ -476,52 +475,56 @@ function onload() {
   /* display puzzle */
   {
     console.log("works");
-    //HERE use a cool alrpgithm for this
-    //alsp make them bold or somwthing
-    //HERE making cool algorithm
-    document.getElementById('a1').innerHTML = X1[1];
+    //HERE
     var counter = 1;
     X1.foreach(x => {
-      document.getElementById("a" + counter).innerHTML = x; counter++;
+      if (x != 0 {
+        //bold, add to setnumbers
+        console.log("works: " + x);
+        document.getElementById("a" + counter).innerHTML = x; 
+        counter++;
+      } else {
+        console.log("doesnt work (delete me later)");
+      }
     });
-    //if cell not blank, add to setNumbers
   }
 }
-/* -------- */
-/* gameplay */
-/* -------- */
-function set(cell) {
-  /* set cell */
-  if (!setNumbers.includes(cell)) {
-    document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
-  }
-  /* check solvability */
-  //if check is on, solve ENTIRE PUZZLE (incase there are multiple answers)
-}
-function get(cellX, cellY, x, y) {
-  cellX += x;
-  cellY += y;
-  if (cellX > 0 && cellX < 10 && cellY > 0 && cellY < 10) {
-    if (cellY == 1) {
-      return X1[cellX];
-    } else if (cellY == 2) {
-      return X2[cellX];
-    } else if (cellY == 3) {
-      return X3[cellX];
-    } else if (cellY == 4) {
-      return X4[cellX];
-    } else if (cellY == 5) {
-      return X5[cellX];
-    } else if (cellY == 6) {
-      return X6[cellX];
-    } else if (cellY == 7) {
-      return X7[cellX];
-    } else if (cellY == 8) {
-      return X8[cellX];
-    } else if (cellY == 9) {
-      return X9[cellX];
+
+  /* -------- */
+  /* gameplay */
+  /* -------- */
+  function set(cell) {
+    /* set cell */
+    if (!setNumbers.includes(cell)) {
+      document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
     }
-  } else {
-    return 0;
+    /* check solvability */
+    //if check is on, solve ENTIRE PUZZLE (incase there are multiple answers)
   }
-}
+  function get(cellX, cellY, x, y) {
+    cellX += x;
+    cellY += y;
+    if (cellX > 0 && cellX < 10 && cellY > 0 && cellY < 10) {
+      if (cellY == 1) {
+        return X1[cellX];
+      } else if (cellY == 2) {
+        return X2[cellX];
+      } else if (cellY == 3) {
+        return X3[cellX];
+      } else if (cellY == 4) {
+        return X4[cellX];
+      } else if (cellY == 5) {
+        return X5[cellX];
+      } else if (cellY == 6) {
+        return X6[cellX];
+      } else if (cellY == 7) {
+        return X7[cellX];
+      } else if (cellY == 8) {
+        return X8[cellX];
+      } else if (cellY == 9) {
+        return X9[cellX];
+      }
+    } else {
+      return 0;
+    }
+  }
