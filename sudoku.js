@@ -482,11 +482,13 @@ function onload() {
   {}
   /* display puzzle */
   {
+    var counter=1;
     function display(row) {
       for (var i = 1; i < 10; i++) {
-        document.getElementById(row + i).innerHTML = cells[i];
+        document.getElementById(row + i).innerHTML = cells[counter];
         document.getElementById(row + i).style = "font-weight:bold;";
         setNumbers.push((row + i));
+        counter++;
       }
     }
     display("a");
