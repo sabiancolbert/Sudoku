@@ -3,9 +3,8 @@
 /* -------------- */
 
 function onload() {
-  //javascript version number for testing
-  document.getElementById("js").innerHTML = version;
-  /* run cell functions */
+  console.log("start");
+  /* create puzzle */
   a1();
   /* unsolve puzzle */
   {}
@@ -94,14 +93,19 @@ function rules(cell, number) {
 
   return invalid;
 }
- 
+
 function set(cell) {
   /* set cell */
   if (!setNumbers.includes(cell)) {
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
   }
   /* check answer */
-  //HERE
+  if(check && !cell.innerHTML == ){
+    document.getElementById(cell).style="color:red;";
+  }
+  else{
+    document.getElementById(cell).style="color:black;";
+  }
 }
 
 /* -------------- */
@@ -400,6 +404,7 @@ function b2() {
 
 /* misc */
 var number = 0;
+var check = false;
 var invalid = true;
 var setNumbers = new Array(0);
 
