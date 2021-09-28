@@ -12,9 +12,9 @@ function onload() {
 		alert("No possible games with these settings.");
 	}
 	function a1() {
-		console.log("works");
 		createCell(A1tried, A1tried, boxArr, 1, 1, X1, Y1, fail, a2);
-	}
+	
+		console.log("works");}
 	function a2() {
 		createCell(A2tried, A2tried, boxArr, 2, 1, X1, Y2, a1, a3);
 	}
