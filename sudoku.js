@@ -32,12 +32,9 @@ function onload() {
 	function display(row) {
 		for (var i = 1; i < 10; i++) {
 			if (cells[counter] > 0) {
-				c("yes");
 				document.getElementById(row + i).innerHTML = cells[counter];
 				document.getElementById(row + i).style = "font-weight:bold;";
 				setNumbers.push((row + i));
-			} else {
-				c("no");
 			}
 			counter++;
 		}
