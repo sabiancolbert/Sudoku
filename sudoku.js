@@ -607,9 +607,272 @@ function b9() {
     X2[9] = number;
     Y9[2] = number;
     cells[18] = number;
-    //c1();
+    c1();
   }
 }
+
+function b1() {
+  invalid = true;
+  while (invalid && B1tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B1tried.includes(number)) {
+      invalid = true;
+    } else {
+      B1tried.push(number);
+      if (Y1.includes(number)) {
+        invalid = true;
+      } else if (X1[1] == number || X1[2] == number || X1[3] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B1tried = [];
+    A9tried = [];
+    A8tried = [];
+    A7tried = [];
+    A6tried = [];
+    A5tried = [];
+    A4tried = [];
+    A3tried = [];
+    A2tried = [];
+    a1();
+  } else {
+    X2[1] = number;
+    Y1[2] = number;
+    cells[10] = number;
+    b2();
+  }
+}
+function b2() {
+  invalid = true;
+  while (invalid && B2tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B2tried.includes(number)) {
+      invalid = true;
+    } else {
+      B2tried.push(number);
+      if (Y2.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[1] == number || X1[2] == number || X1[3] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B2tried = [];
+    b1();
+  } else {
+    X2[2] = number;
+    Y2[2] = number;
+    cells[11] = number;
+    b3();
+  }
+}
+function b3() {
+  invalid = true;
+  while (invalid && B3tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B3tried.includes(number)) {
+      invalid = true;
+    } else {
+      B3tried.push(number);
+      if (Y3.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[1] == number || X1[2] == number || X1[3] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B3tried = [];
+    b2();
+  } else {
+    X2[3] = number;
+    Y3[2] = number;
+    cells[12] = number;
+    b4();
+  }
+}
+function b4() {
+  invalid = true;
+  while (invalid && B4tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B4tried.includes(number)) {
+      invalid = true;
+    } else {
+      B4tried.push(number);
+      if (Y4.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[4] == number || X1[5] == number || X1[6] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B4tried = [];
+    b3();
+  } else {
+    X2[4] = number;
+    Y4[2] = number;
+    cells[13] = number;
+    b5();
+  }
+}
+function b5() {
+  invalid = true;
+  while (invalid && B5tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B5tried.includes(number)) {
+      invalid = true;
+    } else {
+      B5tried.push(number);
+      if (Y5.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[4] == number || X1[5] == number || X1[6] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B5tried = [];
+    b4();
+  } else {
+    X2[5] = number;
+    Y5[2] = number;
+    cells[14] = number;
+    b6();
+  }
+}
+function b6() {
+  invalid = true;
+  while (invalid && B6tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B6tried.includes(number)) {
+      invalid = true;
+    } else {
+      B6tried.push(number);
+      if (Y6.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[4] == number || X1[5] == number || X1[6] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B6tried = [];
+    b5();
+  } else {
+    X2[6] = number;
+    Y6[2] = number;
+    cells[15] = number;
+    b7();
+  }
+}
+function b7() {
+  invalid = true;
+  while (invalid && B7tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B7tried.includes(number)) {
+      invalid = true;
+    } else {
+      B7tried.push(number);
+      if (Y7.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[7] == number || X1[8] == number || X1[9] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B7tried = [];
+    b6();
+  } else {
+    X2[7] = number;
+    Y7[2] = number;
+    cells[16] = number;
+    b8();
+  }
+}
+function b8() {
+  invalid = true;
+  while (invalid && B8tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B8tried.includes(number)) {
+      invalid = true;
+    } else {
+      B8tried.push(number);
+      if (Y8.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[7] == number || X1[8] == number || X1[9] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    C8tried = [];
+    c7();
+  } else {
+    X3[8] = number;
+    Y8[3] = number;
+    cells[26] = number;
+    c9();
+  }
+}
+function c9() {
+  invalid = true;
+  while (invalid && C9tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (C9tried.includes(number)) {
+      invalid = true;
+    } else {
+      C9tried.push(number);
+      if (Y9.includes(number) || X3.includes(number)) {
+        invalid = true;
+      } else if (X1[7] == number || X1[8] == number || X1[9] == number || X2[7] == number || X2[8] == number || X2[9]) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    C9tried = [];
+    c8();
+  } else {
+    X3[9] = number;
+    Y9[3] = number;
+    cells[27] = number;
+    d1();
+  }
+}
+
+//HERR instead of each functuon, make a function with a shit ton of variables
 
 
 
