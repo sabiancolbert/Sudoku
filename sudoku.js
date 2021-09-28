@@ -477,23 +477,23 @@ function onload() {
       document.getElementById(level + (index+1)).style = "font-weight:bold;";
       setNumbers.push(level + (index+1));
     }
-    X1.foreach(setCell());
+    X1.foreach(setCell);
     level = "b";
-    X2.foreach(setCell());
+    X2.foreach(setCell);
     level = "c";
-    X3.foreach(setCell());
+    X3.foreach(setCell);
     level = "d";
-    X4.foreach(setCell());
+    X4.foreach(setCell);
     level = "e";
-    X5.foreach(setCell());
+    X5.foreach(setCell);
     level = "f";
-    X6.foreach(setCell());
+    X6.foreach(setCell);
     level = "g";
-    X7.foreach(setCell());
+    X7.foreach(setCell);
     level = "h";
-    X8.foreach(setCell());
+    X8.foreach(setCell);
     level = "i";
-    X9.foreach(setCell());
+    X9.foreach(setCell);
   }
 }
 
