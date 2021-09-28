@@ -13,8 +13,6 @@ function onload() {
 	}
 	function a1() {
 		createCell(A1tried, A1tried, boxArr, 1, 1, X1, Y1, fail, a2);
-
-		console.log("works" + X1[1]);
 	}
 	function a2() {
 		createCell(A2tried, A2tried, boxArr, 2, 1, X1, Y2, a1, a3);
@@ -37,7 +35,6 @@ function onload() {
 			counter++;
 		}
 	}
-	{
 		display("a");
 		display("b");
 		display("c");
@@ -47,7 +44,6 @@ function onload() {
 		display("g");
 		display("h");
 		display("i");
-	}
 }
 
 function get(cellX, cellY, x, y) {
