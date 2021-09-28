@@ -470,15 +470,30 @@ function onload() {
   {}
   /* display puzzle */
   {
-    function setCell(row, item, index) {
-      console.log(row + item + index);
-      document.getElementById(row + (index+1)).innerHTML = item;
-      document.getElementById(row + (index+1)).style = "font-weight:bold;";
-      setNumbers.push(row + (index+1));
+    var level = "a";
+    function setCell(item, index) {
+      console.log(level + item + index);
+      document.getElementById(level + (index+1)).innerHTML = item;
+      document.getElementById(level + (index+1)).style = "font-weight:bold;";
+      setNumbers.push(level + (index+1));
     }
-    X1.foreach(setCell("a"));
-
-    document.getElementById("a1").innerHTML = X1[1];
+    X1.foreach(setCell());
+    level = "b";
+    X2.foreach(setCell());
+    level = "c";
+    X3.foreach(setCell());
+    level = "d";
+    X4.foreach(setCell());
+    level = "e";
+    X5.foreach(setCell());
+    level = "f";
+    X6.foreach(setCell());
+    level = "g";
+    X7.foreach(setCell());
+    level = "h";
+    X8.foreach(setCell());
+    level = "i";
+    X9.foreach(setCell());
   }
 }
 
