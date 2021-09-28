@@ -178,7 +178,7 @@ function rules(cell, number) {
 /* create cell functions */
 function a1() {
   if (A1tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9+1);
     X1[1] = number;
     Y1[1] = number;
     cells[1] = number;
@@ -190,7 +190,7 @@ function a1() {
 function a2() {
   invalid = true;
   while (invalid && A2tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9+1);
     invalid = false;
     if (A2tried.includes(number)) {
       invalid = true;
@@ -215,7 +215,7 @@ function a2() {
 function a3() {
   invalid = true;
   while (invalid && A3tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9+1);
     invalid = false;
     if (A3tried.includes(number)) {
       invalid = true;
@@ -240,7 +240,7 @@ function a3() {
 function a4() {
   invalid = true;
   while (invalid && A4tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9+1);
     invalid = false;
     if (A4tried.includes(number)) {
       invalid = true;
@@ -265,7 +265,7 @@ function a4() {
 function a5() {
   invalid = true;
   while (invalid && A5tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9+1);
     invalid = false;
     if (A5tried.includes(number)) {
       invalid = true;
@@ -290,7 +290,7 @@ function a5() {
 function a6() {
   invalid = true;
   while (invalid && A6tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9+1);
     invalid = false;
     if (A6tried.includes(number)) {
       invalid = true;
@@ -315,7 +315,7 @@ function a6() {
 function a7() {
   invalid = true;
   while (invalid && A7tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9+1);
     invalid = false;
     if (A7tried.includes(number)) {
       invalid = true;
@@ -340,7 +340,7 @@ function a7() {
 function a8() {
   invalid = true;
   while (invalid && A8tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9+1);
     invalid = false;
     if (A8tried.includes(number)) {
       invalid = true;
@@ -365,7 +365,7 @@ function a8() {
 function a9() {
   invalid = true;
   while (invalid && A9tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9+1);
     invalid = false;
     if (A9tried.includes(number)) {
       invalid = true;
@@ -391,7 +391,7 @@ function a9() {
 function b1() {
   invalid = true;
   while (invalid && B1tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9+1);
     invalid = false;
     if (B1tried.includes(number)) {
       invalid = true;
@@ -424,7 +424,7 @@ function b1() {
 function b2() {
   invalid = true;
   while (invalid && B2tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9+1);
     invalid = false;
     if (B2tried.includes(number)) {
       invalid = true;
@@ -449,7 +449,7 @@ function b2() {
 function b3 () {
   invalid = true;
   while (invalid && B3tried.length < 9) {
-    number = Math.floor(Math.random()*9);
+    number = Math.floor(Math.random()*9 +1);
     invalid = false;
     if (B3tried.includes(number)) {
       invalid = true;
@@ -482,7 +482,7 @@ function onload() {
   {}
   /* display puzzle */
   {
-    var counter=1;
+    var counter = 1;
     function display(row) {
       for (var i = 1; i < 10; i++) {
         document.getElementById(row + i).innerHTML = cells[counter];
