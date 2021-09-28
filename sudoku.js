@@ -584,14 +584,14 @@ function b8() {
 }
 function b9() {
   invalid = true;
-  while (invalid && B8tried.length < 9) {
+  while (invalid && B9tried.length < 9) {
     number = Math.floor(Math.random()*9+1);
     invalid = false;
-    if (B8tried.includes(number)) {
+    if (B9tried.includes(number)) {
       invalid = true;
     } else {
-      B8tried.push(number);
-      if (Y8.includes(number) || X2.includes(number)) {
+      B9tried.push(number);
+      if (Y9.includes(number) || X2.includes(number)) {
         invalid = true;
       } else if (X1[7] == number || X1[8] == number || X1[9] == number) {
         invalid = true;
@@ -601,13 +601,13 @@ function b9() {
     }
   }
   if (invalid) {
-    B8tried = [];
-    b7();
+    B9tried = [];
+    b8();
   } else {
-    X2[8] = number;
-    Y8[2] = number;
-    cells[17] = number;
-    b9();
+    X2[9] = number;
+    Y9[2] = number;
+    cells[18] = number;
+    //c1();
   }
 }
 
