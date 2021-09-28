@@ -470,35 +470,22 @@ function onload() {
   {}
   /* display puzzle */
   {
-    var level = "a";
-    function setCell(item, index) {
-      console.log(level + item + index);
-      document.getElementById(level + (index+1)).innerHTML = item;
-      document.getElementById(level + (index+1)).style = "font-weight:bold;";
-      setNumbers.push(level + (index+1));
+    function display(row) {
+      for (var i = 1; i < 10; i++) {
+        document.getElementById(row + i).innerHTML = X1[i];
+        document.getElementById(row + i).style = "font-weight:bold;";
+        setNumbers.push((row + i));
+      }
     }
-    for(var i = 1; i < 10; i++){
-      document.getElementById("a" + i).innerHTML = X1[i];
-      document.getElementById("a" + i).style = "font-weight:bold;";
-      setNumbers.push(("a" + i));
-    }
-    X1.foreach(setCell);
-    level = "b";
-    X2.foreach(setCell);
-    level = "c";
-    X3.foreach(setCell);
-    level = "d";
-    X4.foreach(setCell);
-    level = "e";
-    X5.foreach(setCell);
-    level = "f";
-    X6.foreach(setCell);
-    level = "g";
-    X7.foreach(setCell);
-    level = "h";
-    X8.foreach(setCell);
-    level = "i";
-    X9.foreach(setCell);
+    display("a");
+    display("b");
+    display("c");
+    display("d");
+    display("e");
+    display("f");
+    display("g");
+    display("h");
+    display("i");
   }
 }
 
@@ -510,9 +497,10 @@ function set(cell) {
   if (!setNumbers.includes(cell)) {
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
   }
-  /* check solvability */
-  //if check is on, solve ENTIRE PUZZLE (incase there are multiple answers)
+  /* check answer */
+  //HERE
 }
+
 function get(cellX, cellY, x, y) {
   cellX += x;
   cellY += y;
