@@ -2,6 +2,8 @@
 /* functions */
 /* --------- */
 
+function c(c){console.log(c);}
+
 function onload() {
 	console.log("start");
 	/* create puzzle */
@@ -28,22 +30,24 @@ function onload() {
 	function display(row) {
 		for (var i = 1; i < 10; i++) {
 			if (cells[counter] > 0) {
+				c("yes");
 				document.getElementById(row + i).innerHTML = cells[counter];
 				document.getElementById(row + i).style = "font-weight:bold;";
 				setNumbers.push((row + i));
 			}
+			else{c("no");}
 			counter++;
 		}
 	}
-		display("a");
-		display("b");
-		display("c");
-		display("d");
-		display("e");
-		display("f");
-		display("g");
-		display("h");
-		display("i");
+	display("a");
+	display("b");
+	display("c");
+	display("d");
+	display("e");
+	display("f");
+	display("g");
+	display("h");
+	display("i");
 }
 
 function get(cellX, cellY, x, y) {
