@@ -477,6 +477,11 @@ function onload() {
       document.getElementById(level + (index+1)).style = "font-weight:bold;";
       setNumbers.push(level + (index+1));
     }
+    for(var i = 1; i < 10; i++){
+      document.getElementById("a" + i).innerHTML = X1[i];
+      document.getElementById("a" + i).style = "font-weight:bold;";
+      setNumbers.push(("a" + i));
+    }
     X1.foreach(setCell);
     level = "b";
     X2.foreach(setCell);
