@@ -1,6 +1,6 @@
-/* -------------- */
-/* main functions */
-/* -------------- */
+/* --------- */
+/* functions */
+/* --------- */
 
 function onload() {
   console.log("start");
@@ -101,32 +101,24 @@ function set(cell) {
   }
   /* check answer */
   var answer = 0;
-  if(cell.substring(0,1) == "a"){
-    answer = cell.substring(1,2);
-  }
-  else if(cell.substring(0,1) == "b"){
-    answer = 9 + cell.substring(1,2);
-  }
-  else if(cell.substring(0,1) == "c"){
-    answer = 18 + cell.substring(1,2);
-  }
-  else if(cell.substring(0,1) == "d"){
-    answer = 27 + cell.substring(1,2);
-  }
-  else if(cell.substring(0,1) == "e"){
-    answer = 36 + cell.substring(1,2);
-  }
-  else if(cell.substring(0,1) == "f"){
-    answer = 45 + cell.substring(1,2);
-  }
-  else if(cell.substring(0,1) == "g"){
-    answer = 54 + cell.substring(1,2);
-  }
-  else if(cell.substring(0,1) == "h"){
-    answer = 63 + cell.substring(1,2);
-  }
-  else if(cell.substring(0,1) == "i"){
-    answer = 72 + cell.substring(1,2);
+  if (cell.substring(0, 1) == "a") {
+    answer = cell.substring(1, 2);
+  } else if (cell.substring(0, 1) == "b") {
+    answer = 9 + cell.substring(1, 2);
+  } else if (cell.substring(0, 1) == "c") {
+    answer = 18 + cell.substring(1, 2);
+  } else if (cell.substring(0, 1) == "d") {
+    answer = 27 + cell.substring(1, 2);
+  } else if (cell.substring(0, 1) == "e") {
+    answer = 36 + cell.substring(1, 2);
+  } else if (cell.substring(0, 1) == "f") {
+    answer = 45 + cell.substring(1, 2);
+  } else if (cell.substring(0, 1) == "g") {
+    answer = 54 + cell.substring(1, 2);
+  } else if (cell.substring(0, 1) == "h") {
+    answer = 63 + cell.substring(1, 2);
+  } else if (cell.substring(0, 1) == "i") {
+    answer = 72 + cell.substring(1, 2);
   }
   if (check && !cell.innerHTML == answer) {
     document.getElementById(cell).style = "color:red;";
@@ -135,9 +127,7 @@ function set(cell) {
   }
 }
 
-/* -------------- */
 /* cell functions */
-/* -------------- */
 
 function a1() {
   if (A1tried.length < 9) {
@@ -404,7 +394,7 @@ function b2() {
     if (B2tried.includes(number)) {
       invalid = true;
     } else {
-      B1tried.push(number);
+      B2tried.push(number);
       if (Y2.includes(number) || X2.includes(number)) {
         invalid = true;
       } else if (X1[1] == number || X1[2] == number || X1[3] == number) {
@@ -421,15 +411,212 @@ function b2() {
     X2[2] = number;
     Y2[2] = number;
     cells[11] = number;
-    //b3();
+    b3();
   }
 }
+function b3() {
+  invalid = true;
+  while (invalid && B3tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B3tried.includes(number)) {
+      invalid = true;
+    } else {
+      B3tried.push(number);
+      if (Y3.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[1] == number || X1[2] == number || X1[3] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B3tried = [];
+    b2();
+  } else {
+    X2[3] = number;
+    Y3[2] = number;
+    cells[12] = number;
+    b4();
+  }
+}
+function b4() {
+  invalid = true;
+  while (invalid && B4tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B4tried.includes(number)) {
+      invalid = true;
+    } else {
+      B4tried.push(number);
+      if (Y4.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[4] == number || X1[5] == number || X1[6] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B4tried = [];
+    b3();
+  } else {
+    X2[4] = number;
+    Y4[2] = number;
+    cells[13] = number;
+    b5();
+  }
+}
+function b5() {
+  invalid = true;
+  while (invalid && B5tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B5tried.includes(number)) {
+      invalid = true;
+    } else {
+      B5tried.push(number);
+      if (Y5.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[4] == number || X1[5] == number || X1[6] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B5tried = [];
+    b4();
+  } else {
+    X2[5] = number;
+    Y5[2] = number;
+    cells[14] = number;
+    b6();
+  }
+}
+function b6() {
+  invalid = true;
+  while (invalid && B6tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B6tried.includes(number)) {
+      invalid = true;
+    } else {
+      B6tried.push(number);
+      if (Y6.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[4] == number || X1[5] == number || X1[6] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B6tried = [];
+    b5();
+  } else {
+    X2[6] = number;
+    Y6[2] = number;
+    cells[15] = number;
+    b7();
+  }
+}
+function b7() {
+  invalid = true;
+  while (invalid && B7tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B7tried.includes(number)) {
+      invalid = true;
+    } else {
+      B7tried.push(number);
+      if (Y7.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[7] == number || X1[8] == number || X1[9] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B7tried = [];
+    b6();
+  } else {
+    X2[7] = number;
+    Y7[2] = number;
+    cells[16] = number;
+    b8();
+  }
+}
+function b8() {
+  invalid = true;
+  while (invalid && B8tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B8tried.includes(number)) {
+      invalid = true;
+    } else {
+      B8tried.push(number);
+      if (Y8.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[7] == number || X1[8] == number || X1[9] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B8tried = [];
+    b7();
+  } else {
+    X2[8] = number;
+    Y8[2] = number;
+    cells[17] = number;
+    b9();
+  }
+}
+function b9() {
+  invalid = true;
+  while (invalid && B8tried.length < 9) {
+    number = Math.floor(Math.random()*9+1);
+    invalid = false;
+    if (B8tried.includes(number)) {
+      invalid = true;
+    } else {
+      B8tried.push(number);
+      if (Y8.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[7] == number || X1[8] == number || X1[9] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
+    }
+  }
+  if (invalid) {
+    B8tried = [];
+    b7();
+  } else {
+    X2[8] = number;
+    Y8[2] = number;
+    cells[17] = number;
+    b9();
+  }
+}
+
+
 
 /* --------- */
 /* variables */
 /* --------- */
 
-/* misc */
 var number = 0;
 var check = false;
 var invalid = true;
@@ -477,7 +664,7 @@ var Y7 = new Array(10);
 var Y8 = new Array(10);
 var Y9 = new Array(10);
 
-/* construction */
+/* ram for randomness */
 
 var A1tried = new Array(0);
 var A2tried = new Array(0);
