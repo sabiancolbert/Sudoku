@@ -5,9 +5,10 @@
 /* create variables */
 var number = 0;
 var invalid = true;
-var setNumbers = new Array(0);
 
-//for construction and destruction
+var setNumbers = new Array(0);
+var cells = new Array(82);
+
 const X1 = new Array(10);
 const X2 = new Array(10);
 const X3 = new Array(10);
@@ -18,7 +19,6 @@ const X7 = new Array(10);
 const X8 = new Array(10);
 const X9 = new Array(10);
 
-//for construction and solution
 const Y1 = new Array(10);
 const Y2 = new Array(10);
 const Y3 = new Array(10);
@@ -29,7 +29,7 @@ const Y7 = new Array(10);
 const Y8 = new Array(10);
 const Y9 = new Array(10);
 
-//0,0 wont be used. starts at 1,1 for simplicity;
+//for above, [0,0] wont be used. starts at 1,1 for simplicity;
 
 const A1tried = new Array(0);
 const A2tried = new Array(0);
@@ -181,6 +181,7 @@ function a1() {
     number = Math.floor(Math.random()*9);
     X1[1] = number;
     Y1[1] = number;
+    cells[1] = number;
     a2();
   } else {
     alert("No possible games with these settings.");
@@ -207,6 +208,7 @@ function a2() {
   } else {
     X1[2] = number;
     Y2[1] = number;
+    cells[2] = number;
     a3();
   }
 }
@@ -231,6 +233,7 @@ function a3() {
   } else {
     X1[3] = number;
     Y3[1] = number;
+    cells[3] = number;
     a4();
   }
 }
@@ -255,6 +258,7 @@ function a4() {
   } else {
     X1[4] = number;
     Y4[1] = number;
+    cells[4] = number;
     a5();
   }
 }
@@ -279,6 +283,7 @@ function a5() {
   } else {
     X1[5] = number;
     Y5[1] = number;
+    cells[5] = number;
     a6();
   }
 }
@@ -303,6 +308,7 @@ function a6() {
   } else {
     X1[6] = number;
     Y6[1] = number;
+    cells[6] = number;
     a7();
   }
 }
@@ -327,6 +333,7 @@ function a7() {
   } else {
     X1[7] = number;
     Y7[1] = number;
+    cells[7] = number;
     a8();
   }
 }
@@ -351,6 +358,7 @@ function a8() {
   } else {
     X1[8] = number;
     Y8[1] = number;
+    cells[8] = number;
     a9();
   }
 }
@@ -375,6 +383,7 @@ function a9() {
   } else {
     X1[9] = number;
     Y9[1] = number;
+    cells[9] = number;
     b1();
   }
 }
@@ -407,7 +416,8 @@ function b1() {
     a1();
   } else {
     X2[1] = number;
-    Y1[1] = number;
+    Y1[2] = number;
+    cells[10] = number;
     b2();
   }
 }
@@ -432,6 +442,7 @@ function b2() {
   } else {
     X2[2] = number;
     Y2[2] = number;
+    cells[11] = number;
     b3();
   }
 }
@@ -456,6 +467,7 @@ function b3 () {
   } else {
     X2[3] = number;
     Y3[2] = number;
+    cells[12] = number;
     //b4();
   }
 }
@@ -472,7 +484,7 @@ function onload() {
   {
     function display(row) {
       for (var i = 1; i < 10; i++) {
-        document.getElementById(row + i).innerHTML = X1[i];
+        document.getElementById(row + i).innerHTML = cells[i];
         document.getElementById(row + i).style = "font-weight:bold;";
         setNumbers.push((row + i));
       }
