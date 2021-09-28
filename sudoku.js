@@ -485,9 +485,11 @@ function onload() {
     var counter = 1;
     function display(row) {
       for (var i = 1; i < 10; i++) {
-        document.getElementById(row + i).innerHTML = cells[counter];
-        document.getElementById(row + i).style = "font-weight:bold;";
-        setNumbers.push((row + i));
+        if (cells[counter] < 10) {
+          document.getElementById(row + i).innerHTML = cells[counter];
+          document.getElementById(row + i).style = "font-weight:bold;";
+          setNumbers.push((row + i));
+        }
         counter++;
       }
     }
