@@ -463,7 +463,7 @@ function b3 () {
 
 function onload() {
   //javascript version number for testing
-  document.getElementById("js").innerHTML = "     5   ";
+  document.getElementById("js").innerHTML = version;
   /* run cell functions */
   a1();
   /* unsolve puzzle */
@@ -535,3 +535,4 @@ function get(cellX, cellY, x, y) {
     return 0;
   }
 }
+var version = 99;
