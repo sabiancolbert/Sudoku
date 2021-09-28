@@ -182,6 +182,7 @@ function a1() {
     X1[1] = number;
     Y1[1] = number;
     cells[1] = number;
+    A1tried.push(number);
     a2();
   } else {
     alert("No possible games with these settings.");
@@ -194,12 +195,13 @@ function a2() {
     invalid = false;
     if (A2tried.includes(number)) {
       invalid = true;
-    } else if (X1.includes(number)) {
-      invalid = true;
-      A2tried.push(number);
     } else {
-      invalid = rules(2, 1);
       A2tried.push(number);
+      if (X1.includes(number)) {
+        invalid = true;
+      } else {
+        invalid = rules(2, 1);
+      }
     }
   }
   if (invalid) {
@@ -219,12 +221,13 @@ function a3() {
     invalid = false;
     if (A3tried.includes(number)) {
       invalid = true;
-    } else if (X1.includes(number)) {
-      invalid = true;
-      A3tried.push(number);
     } else {
-      invalid = rules(3, 1);
       A3tried.push(number);
+      if (X1.includes(number)) {
+        invalid = true;
+      } else {
+        invalid = rules(3, 1);
+      }
     }
   }
   if (invalid) {
@@ -244,12 +247,14 @@ function a4() {
     invalid = false;
     if (A4tried.includes(number)) {
       invalid = true;
-    } else if (X1.includes(number)) {
-      invalid = true;
-      A4tried.push(number);
     } else {
-      invalid = rules(4, 1);
       A4tried.push(number);
+      if (X1.includes(number)) {
+        invalid = true;
+        A4tried.push(number);
+      } else {
+        invalid = rules(4, 1);
+      }
     }
   }
   if (invalid) {
@@ -269,12 +274,13 @@ function a5() {
     invalid = false;
     if (A5tried.includes(number)) {
       invalid = true;
-    } else if (X1.includes(number)) {
-      invalid = true;
-      A5tried.push(number);
     } else {
-      invalid = rules(5, 1);
       A5tried.push(number);
+      if (X1.includes(number)) {
+        invalid = true;
+      } else {
+        invalid = rules(5, 1);
+      }
     }
   }
   if (invalid) {
@@ -294,12 +300,13 @@ function a6() {
     invalid = false;
     if (A6tried.includes(number)) {
       invalid = true;
-    } else if (X1.includes(number)) {
-      invalid = true;
-      A6tried.push(number);
     } else {
-      invalid = rules(6, 1);
       A6tried.push(number);
+      if (X1.includes(number)) {
+        invalid = true;
+      } else {
+        invalid = rules(6, 1);
+      }
     }
   }
   if (invalid) {
@@ -319,12 +326,13 @@ function a7() {
     invalid = false;
     if (A7tried.includes(number)) {
       invalid = true;
-    } else if (X1.includes(number)) {
-      invalid = true;
-      A7tried.push(number);
     } else {
-      invalid = rules(7, 1);
       A7tried.push(number);
+      if (X1.includes(number)) {
+        invalid = true;
+      } else {
+        invalid = rules(7, 1);
+      }
     }
   }
   if (invalid) {
@@ -344,13 +352,13 @@ function a8() {
     invalid = false;
     if (A8tried.includes(number)) {
       invalid = true;
-    } else if (X1.includes(number)) {
-      invalid = true;
-      A8tried.push(number);
     } else {
-      invalid = rules(8, 1);
       A8tried.push(number);
-    }
+      if (X1.includes(number)) {
+        invalid = true;
+      } else {
+        invalid = rules(8, 1);
+      }}
   }
   if (invalid) {
     A8tried = []
@@ -369,12 +377,13 @@ function a9() {
     invalid = false;
     if (A9tried.includes(number)) {
       invalid = true;
-    } else if (X1.includes(number)) {
-      invalid = true;
-      A9tried.push(number);
     } else {
-      invalid = rules(9, 1);
       A9tried.push(number);
+      if (X1.includes(number)) {
+        invalid = true;
+      } else {
+        invalid = rules(9, 1);
+      }
     }
   }
   if (invalid) {
@@ -395,14 +404,15 @@ function b1() {
     invalid = false;
     if (B1tried.includes(number)) {
       invalid = true;
-    } else {if (Y1.includes(number)) {
-      invalid = true;
-    } else if (){
-      invalid = true;
     } else {
-      invalid = rules();
-    }
-    B1tried.push(number);
+      B1tried.push(number);
+      if (Y1.includes(number)) {
+        invalid = true;
+      } else if (X1[1] == number || X1[2] == number || X1[3] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
     }
   }
   if (invalid) {
@@ -430,12 +440,15 @@ function b2() {
     invalid = false;
     if (B2tried.includes(number)) {
       invalid = true;
-    } else if (Y2.includes(number) || X2.includes(number)) {
-      invalid = true;
-      B2tried.push(number);
     } else {
-      invalid = rules();
-      B2tried.push(number);
+      B1tried.push(number);
+      if (Y2.includes(number) || X2.includes(number)) {
+        invalid = true;
+      } else if (X1[1] == number || X1[2] == number || X1[3] == number) {
+        invalid = true;
+      } else {
+        invalid = rules();
+      }
     }
   }
   if (invalid) {
@@ -448,32 +461,6 @@ function b2() {
     b3();
   }
 }
-function b3 () {
-  invalid = true;
-  while (invalid && B3tried.length < 9) {
-    number = Math.floor(Math.random()*9 +1);
-    invalid = false;
-    if (B3tried.includes(number)) {
-      invalid = true;
-    } else if (Y3.includes(number) || X2.includes(number)) {
-      invalid = true;
-      B3tried.push(number);
-    } else {
-      invalid = rules();
-      B3tried.push(number);
-    }
-  }
-  if (invalid) {
-    B3tried = [];
-    b2();
-  } else {
-    X2[3] = number;
-    Y3[2] = number;
-    cells[12] = number;
-    //b4();
-  }
-}
-
 
 function onload() {
   //javascript version number for testing
