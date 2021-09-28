@@ -17,24 +17,25 @@ function onload() {
 	function a2() {
 		createCell(A2tried, A2tried, boxArr, 2, 1, X1, Y2, a1, a3);
 	}
-function a3(){
-	console.log("done");
-}
+	function a3() {
+		console.log("done");
+	}
+	a1();
 	/* unsolve puzzle */
 	{}
 	/* display puzzle */
-		counter = 1;
-		function display(row) {
-			for (var i = 1; i < 10; i++) {
-				if (cells[counter] > 0) {
-					document.getElementById(row + i).innerHTML = cells[counter];
-					document.getElementById(row + i).style = "font-weight:bold;";
-					setNumbers.push((row + i));
-				}
-				counter++;
+	counter = 1;
+	function display(row) {
+		for (var i = 1; i < 10; i++) {
+			if (cells[counter] > 0) {
+				document.getElementById(row + i).innerHTML = cells[counter];
+				document.getElementById(row + i).style = "font-weight:bold;";
+				setNumbers.push((row + i));
 			}
+			counter++;
 		}
-		{
+	}
+	{
 		display("a");
 		display("b");
 		display("c");
@@ -44,7 +45,7 @@ function a3(){
 		display("g");
 		display("h");
 		display("i");
-		}
+	}
 }
 
 function get(cellX, cellY, x, y) {
