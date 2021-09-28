@@ -395,12 +395,14 @@ function b1() {
     invalid = false;
     if (B1tried.includes(number)) {
       invalid = true;
-    } else if (Y1.includes(number)) {
+    } else {if (Y1.includes(number)) {
       invalid = true;
-      B1tried.push(number);
+    } else if (){
+      invalid = true;
     } else {
       invalid = rules();
-      B1tried.push(number);
+    }
+    B1tried.push(number);
     }
   }
   if (invalid) {
