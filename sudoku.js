@@ -458,7 +458,7 @@ function b2() {
     X2[2] = number;
     Y2[2] = number;
     cells[11] = number;
-    b3();
+    //b3();
   }
 }
 
