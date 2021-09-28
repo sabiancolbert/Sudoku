@@ -170,13 +170,13 @@ function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, ne
 		xLine[x] = 0;
 		yLine[y] = 0;
 		cellCounter--;
-		previous;
+		previous();
 	} else {
 		xLine[x] = number;
 		yLine[y] = number;
 		cells[cellCounter] = number;
 		cellCounter++;
-		next;
+		next();
 	}
 }
 
