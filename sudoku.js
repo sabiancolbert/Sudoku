@@ -2,7 +2,9 @@
 /* functions */
 /* --------- */
 
-function c(c){console.log(c);}
+function c(c) {
+	console.log(c);
+}
 
 function onload() {
 	console.log("start");
@@ -34,8 +36,9 @@ function onload() {
 				document.getElementById(row + i).innerHTML = cells[counter];
 				document.getElementById(row + i).style = "font-weight:bold;";
 				setNumbers.push((row + i));
+			} else {
+				c("no");
 			}
-			else{c("no");}
 			counter++;
 		}
 	}
@@ -186,7 +189,7 @@ function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, ne
 /* variables */
 /* --------- */
 
-var cellCounter = 0;
+var cellCounter = 1;
 var invalid = true;
 var check = false;
 
