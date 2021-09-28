@@ -167,13 +167,13 @@ function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, ne
 		clearArr = [];
 		xLine[x] = 0;
 		yLine[y] = 0;
-		counter--;
+		cellCounter--;
 		previous;
 	} else {
 		xLine[x] = number;
 		yLine[y] = number;
-		cells[counter] = number;
-		counter++;
+		cells[cellCounter] = number;
+		cellCounter++;
 		next;
 	}
 }
@@ -184,8 +184,9 @@ function createCell(triedArr, clearArr, boxArr, x, y, xLine, yLine, previous, ne
 /* variables */
 /* --------- */
 
-var check = false;
+var cellCounter = 0;
 var invalid = true;
+var check = false;
 
 /* rules */
 var co = false;
