@@ -100,11 +100,38 @@ function set(cell) {
     document.getElementById(cell).innerHTML = document.getElementById("selection").innerHTML;
   }
   /* check answer */
-  if(check && !cell.innerHTML == ){
-    document.getElementById(cell).style="color:red;";
+  var answer = 0;
+  if(cell.substring(0,1) == "a"){
+    answer = cell.substring(1,2);
   }
-  else{
-    document.getElementById(cell).style="color:black;";
+  else if(cell.substring(0,1) == "b"){
+    answer = 9 + cell.substring(1,2);
+  }
+  else if(cell.substring(0,1) == "c"){
+    answer = 18 + cell.substring(1,2);
+  }
+  else if(cell.substring(0,1) == "d"){
+    answer = 27 + cell.substring(1,2);
+  }
+  else if(cell.substring(0,1) == "e"){
+    answer = 36 + cell.substring(1,2);
+  }
+  else if(cell.substring(0,1) == "f"){
+    answer = 45 + cell.substring(1,2);
+  }
+  else if(cell.substring(0,1) == "g"){
+    answer = 54 + cell.substring(1,2);
+  }
+  else if(cell.substring(0,1) == "h"){
+    answer = 63 + cell.substring(1,2);
+  }
+  else if(cell.substring(0,1) == "i"){
+    answer = 72 + cell.substring(1,2);
+  }
+  if (check && !cell.innerHTML == answer) {
+    document.getElementById(cell).style = "color:red;";
+  } else {
+    document.getElementById(cell).style = "color:black;";
   }
 }
 
